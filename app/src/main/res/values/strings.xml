@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">DesafioPractico01DSM</string>
+    <string name="mes">Mes:</string>
+    <string name="ventas">Total de ventas:</string>
+    <string name="porcentaje_comision">Porcentaje de comisión:</string>
+    <string name="total_comisiones">Total de comisiones a recibir:</string>
+        <string-array name="months_array">
+            <item>Enero</item>
+            <item>Febrero</item>
+            <item>Marzo</item>
+            <item>Abril</item>
+            <item>Mayo</item>
+            <item>Junio</item>
+            <item>Julio</item>
+            <item>Agosto</item>
+            <item>Septiembre</item>
+            <item>Octubre</item>
+            <item>Noviembre</item>
+            <item>Diciembre</item>
+        </string-array>
 </resources>

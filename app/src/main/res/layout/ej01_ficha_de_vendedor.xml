@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityEjercicio1">
+
+    <EditText
+        android:id="@+id/txtNombreEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Nombre completo del vendedor"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtCodigoEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtVentas"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="$ Ventas totales en el mes"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/month_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoEmpleado" />
+
+    <EditText
+        android:id="@+id/txtCodigoEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Codigo de empleado"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtVentas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreEmpleado" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="308dp"
+        android:layout_height="49dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_spinner" />
+
+    <Spinner
+        android:id="@+id/month_spinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:entries="@array/months_array"
+        android:hint="Ventas totales"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVentas" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
