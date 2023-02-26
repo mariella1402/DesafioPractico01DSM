@@ -4,112 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EJ01_FichaDeVendedor">
+    tools:context=".ActivityEjercicio1">
 
     <EditText
         android:id="@+id/txtNombreEmpleado"
-        android:layout_width="367dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="64dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Nombre completo del vendedor"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtCodigoEmpleado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtVentas"
-        android:layout_width="367dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="4dp"
         android:ems="10"
+        android:hint="$ Ventas totales en el mes"
         android:inputType="numberDecimal"
-        android:hint="Ventas totales"
-        app:layout_constraintBottom_toTopOf="@+id/lblComision"
+        app:layout_constraintBottom_toTopOf="@+id/month_spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCodigoEmpleado" />
 
-    <TextView
-        android:id="@+id/resTotal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="0.0"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTotal" />
-
-    <TextView
-        android:id="@+id/lblComision"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Comision:"
-        app:layout_constraintBottom_toTopOf="@+id/resComision"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtVentas" />
-
-    <TextView
-        android:id="@+id/resComision"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="0.0%"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblComision" />
-
-    <TextView
-        android:id="@+id/lblTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Total:"
-        app:layout_constraintBottom_toTopOf="@+id/resTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resComision" />
-
     <EditText
         android:id="@+id/txtCodigoEmpleado"
-        android:layout_width="366dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="4dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Codigo de empleado"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtVentas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreEmpleado" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="308dp"
+        android:layout_height="49dp"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resTotal" />
+        app:layout_constraintTop_toBottomOf="@+id/month_spinner" />
+
+    <Spinner
+        android:id="@+id/month_spinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:entries="@array/months_array"
+        android:hint="Ventas totales"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVentas" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
